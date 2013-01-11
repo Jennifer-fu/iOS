@@ -1,0 +1,432 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		49D865BC16A039B600E71B3E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D865BB16A039B600E71B3E /* UIKit.framework */; };
+		49D865BE16A039B600E71B3E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D865BD16A039B600E71B3E /* Foundation.framework */; };
+		49D865C016A039B600E71B3E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D865BF16A039B600E71B3E /* CoreGraphics.framework */; };
+		49D865C616A039B600E71B3E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49D865C416A039B600E71B3E /* InfoPlist.strings */; };
+		49D865C816A039B600E71B3E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D865C716A039B600E71B3E /* main.m */; };
+		49D865CC16A039B600E71B3E /* JFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D865CB16A039B600E71B3E /* JFAppDelegate.m */; };
+		49D865D416A039B600E71B3E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D865D316A039B600E71B3E /* SenTestingKit.framework */; };
+		49D865D516A039B600E71B3E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D865BB16A039B600E71B3E /* UIKit.framework */; };
+		49D865D616A039B600E71B3E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D865BD16A039B600E71B3E /* Foundation.framework */; };
+		49D865DE16A039B600E71B3E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49D865DC16A039B600E71B3E /* InfoPlist.strings */; };
+		49D865E116A039B600E71B3E /* NumberGuessorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D865E016A039B600E71B3E /* NumberGuessorTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		49D865D716A039B600E71B3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49D865AE16A039B600E71B3E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49D865B616A039B600E71B3E;
+			remoteInfo = NumberGuessor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		49D865B716A039B600E71B3E /* NumberGuessor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumberGuessor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		49D865BB16A039B600E71B3E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		49D865BD16A039B600E71B3E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		49D865BF16A039B600E71B3E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		49D865C316A039B600E71B3E /* NumberGuessor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NumberGuessor-Info.plist"; sourceTree = "<group>"; };
+		49D865C516A039B600E71B3E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		49D865C716A039B600E71B3E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		49D865C916A039B600E71B3E /* NumberGuessor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NumberGuessor-Prefix.pch"; sourceTree = "<group>"; };
+		49D865CA16A039B600E71B3E /* JFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JFAppDelegate.h; sourceTree = "<group>"; };
+		49D865CB16A039B600E71B3E /* JFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFAppDelegate.m; sourceTree = "<group>"; };
+		49D865D216A039B600E71B3E /* NumberGuessorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NumberGuessorTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		49D865D316A039B600E71B3E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		49D865DB16A039B600E71B3E /* NumberGuessorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NumberGuessorTests-Info.plist"; sourceTree = "<group>"; };
+		49D865DD16A039B600E71B3E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		49D865DF16A039B600E71B3E /* NumberGuessorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NumberGuessorTests.h; sourceTree = "<group>"; };
+		49D865E016A039B600E71B3E /* NumberGuessorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NumberGuessorTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		49D865B416A039B600E71B3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49D865BC16A039B600E71B3E /* UIKit.framework in Frameworks */,
+				49D865BE16A039B600E71B3E /* Foundation.framework in Frameworks */,
+				49D865C016A039B600E71B3E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49D865CE16A039B600E71B3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49D865D416A039B600E71B3E /* SenTestingKit.framework in Frameworks */,
+				49D865D516A039B600E71B3E /* UIKit.framework in Frameworks */,
+				49D865D616A039B600E71B3E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		49D865AC16A039B600E71B3E = {
+			isa = PBXGroup;
+			children = (
+				49D865C116A039B600E71B3E /* NumberGuessor */,
+				49D865D916A039B600E71B3E /* NumberGuessorTests */,
+				49D865BA16A039B600E71B3E /* Frameworks */,
+				49D865B816A039B600E71B3E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		49D865B816A039B600E71B3E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				49D865B716A039B600E71B3E /* NumberGuessor.app */,
+				49D865D216A039B600E71B3E /* NumberGuessorTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		49D865BA16A039B600E71B3E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49D865BB16A039B600E71B3E /* UIKit.framework */,
+				49D865BD16A039B600E71B3E /* Foundation.framework */,
+				49D865BF16A039B600E71B3E /* CoreGraphics.framework */,
+				49D865D316A039B600E71B3E /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		49D865C116A039B600E71B3E /* NumberGuessor */ = {
+			isa = PBXGroup;
+			children = (
+				49D865CA16A039B600E71B3E /* JFAppDelegate.h */,
+				49D865CB16A039B600E71B3E /* JFAppDelegate.m */,
+				49D865C216A039B600E71B3E /* Supporting Files */,
+			);
+			path = NumberGuessor;
+			sourceTree = "<group>";
+		};
+		49D865C216A039B600E71B3E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				49D865C316A039B600E71B3E /* NumberGuessor-Info.plist */,
+				49D865C416A039B600E71B3E /* InfoPlist.strings */,
+				49D865C716A039B600E71B3E /* main.m */,
+				49D865C916A039B600E71B3E /* NumberGuessor-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		49D865D916A039B600E71B3E /* NumberGuessorTests */ = {
+			isa = PBXGroup;
+			children = (
+				49D865DF16A039B600E71B3E /* NumberGuessorTests.h */,
+				49D865E016A039B600E71B3E /* NumberGuessorTests.m */,
+				49D865DA16A039B600E71B3E /* Supporting Files */,
+			);
+			path = NumberGuessorTests;
+			sourceTree = "<group>";
+		};
+		49D865DA16A039B600E71B3E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				49D865DB16A039B600E71B3E /* NumberGuessorTests-Info.plist */,
+				49D865DC16A039B600E71B3E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		49D865B616A039B600E71B3E /* NumberGuessor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49D865E416A039B600E71B3E /* Build configuration list for PBXNativeTarget "NumberGuessor" */;
+			buildPhases = (
+				49D865B316A039B600E71B3E /* Sources */,
+				49D865B416A039B600E71B3E /* Frameworks */,
+				49D865B516A039B600E71B3E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NumberGuessor;
+			productName = NumberGuessor;
+			productReference = 49D865B716A039B600E71B3E /* NumberGuessor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		49D865D116A039B600E71B3E /* NumberGuessorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49D865E716A039B600E71B3E /* Build configuration list for PBXNativeTarget "NumberGuessorTests" */;
+			buildPhases = (
+				49D865CD16A039B600E71B3E /* Sources */,
+				49D865CE16A039B600E71B3E /* Frameworks */,
+				49D865CF16A039B600E71B3E /* Resources */,
+				49D865D016A039B600E71B3E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				49D865D816A039B600E71B3E /* PBXTargetDependency */,
+			);
+			name = NumberGuessorTests;
+			productName = NumberGuessorTests;
+			productReference = 49D865D216A039B600E71B3E /* NumberGuessorTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		49D865AE16A039B600E71B3E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = JF;
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = Jennifer;
+			};
+			buildConfigurationList = 49D865B116A039B600E71B3E /* Build configuration list for PBXProject "NumberGuessor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 49D865AC16A039B600E71B3E;
+			productRefGroup = 49D865B816A039B600E71B3E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				49D865B616A039B600E71B3E /* NumberGuessor */,
+				49D865D116A039B600E71B3E /* NumberGuessorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		49D865B516A039B600E71B3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49D865C616A039B600E71B3E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49D865CF16A039B600E71B3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49D865DE16A039B600E71B3E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		49D865D016A039B600E71B3E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		49D865B316A039B600E71B3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49D865C816A039B600E71B3E /* main.m in Sources */,
+				49D865CC16A039B600E71B3E /* JFAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49D865CD16A039B600E71B3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49D865E116A039B600E71B3E /* NumberGuessorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		49D865D816A039B600E71B3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49D865B616A039B600E71B3E /* NumberGuessor */;
+			targetProxy = 49D865D716A039B600E71B3E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		49D865C416A039B600E71B3E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49D865C516A039B600E71B3E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		49D865DC16A039B600E71B3E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49D865DD16A039B600E71B3E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		49D865E216A039B600E71B3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		49D865E316A039B600E71B3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		49D865E516A039B600E71B3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NumberGuessor/NumberGuessor-Prefix.pch";
+				INFOPLIST_FILE = "NumberGuessor/NumberGuessor-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		49D865E616A039B600E71B3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NumberGuessor/NumberGuessor-Prefix.pch";
+				INFOPLIST_FILE = "NumberGuessor/NumberGuessor-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		49D865E816A039B600E71B3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NumberGuessor.app/NumberGuessor";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NumberGuessor/NumberGuessor-Prefix.pch";
+				INFOPLIST_FILE = "NumberGuessorTests/NumberGuessorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		49D865E916A039B600E71B3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NumberGuessor.app/NumberGuessor";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NumberGuessor/NumberGuessor-Prefix.pch";
+				INFOPLIST_FILE = "NumberGuessorTests/NumberGuessorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		49D865B116A039B600E71B3E /* Build configuration list for PBXProject "NumberGuessor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49D865E216A039B600E71B3E /* Debug */,
+				49D865E316A039B600E71B3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49D865E416A039B600E71B3E /* Build configuration list for PBXNativeTarget "NumberGuessor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49D865E516A039B600E71B3E /* Debug */,
+				49D865E616A039B600E71B3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		49D865E716A039B600E71B3E /* Build configuration list for PBXNativeTarget "NumberGuessorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49D865E816A039B600E71B3E /* Debug */,
+				49D865E916A039B600E71B3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 49D865AE16A039B600E71B3E /* Project object */;
+}

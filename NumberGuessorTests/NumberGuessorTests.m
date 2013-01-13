@@ -7,26 +7,39 @@
 //
 
 #import "NumberGuessorTests.h"
+#import "JFNumberGuessor.h"
 
-@implementation NumberGuessorTests
+@implementation NumberGuessorTests{
+    JFNumberGuessor *guessor;
+}
 
 - (void)setUp
 {
     [super setUp];
-    
-    // Set-up code here.
+    guessor = [[JFNumberGuessor alloc] initWithTarget:@[@1,@2,@3,@4]];
 }
 
 - (void)tearDown
 {
-    // Tear-down code here.
-    
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testShouldReturn4A0BWhenInputCorrect
 {
-    STFail(@"Unit tests are not implemented yet in NumberGuessorTests");
+    NSString *result = [guessor guessWith: @[ @1,@2,@3,@4 ]];
+    STAssertEqualObjects(@"4A0B", result, @"Wrong answer!");
+}
+
+- (void)testShouldReturn0A0BWhenInputAreNotMatched
+{
+    NSString *result = [guessor guessWith:@[@5,@6,@7,@8]];
+    STAssertEqualObjects(@"0A0B", result, @"Wrong guess");
+}
+
+- (void)testShouldReturn0A1BWhenInputAreNotMatched
+{
+    NSString *result = [guessor guessWith:@[@4,@6,@7,@8]];
+    STAssertEqualObjects(@"0A1B", result, @"Wrong guess");
 }
 
 @end

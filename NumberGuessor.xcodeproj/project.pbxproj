@@ -18,6 +18,9 @@
 		49D865D616A039B600E71B3E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D865BD16A039B600E71B3E /* Foundation.framework */; };
 		49D865DE16A039B600E71B3E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49D865DC16A039B600E71B3E /* InfoPlist.strings */; };
 		49D865E116A039B600E71B3E /* NumberGuessorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D865E016A039B600E71B3E /* NumberGuessorTests.m */; };
+		49D865EC16A2708100E71B3E /* JFNumberGuessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D865EB16A2708100E71B3E /* JFNumberGuessor.m */; };
+		49D865F316A283CB00E71B3E /* JFRandomNumberGeneratorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D865F216A283CB00E71B3E /* JFRandomNumberGeneratorTests.m */; };
+		49D865F716A2860600E71B3E /* JFRandomNumberGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D865F616A2860600E71B3E /* JFRandomNumberGenerator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,12 @@
 		49D865DD16A039B600E71B3E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		49D865DF16A039B600E71B3E /* NumberGuessorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NumberGuessorTests.h; sourceTree = "<group>"; };
 		49D865E016A039B600E71B3E /* NumberGuessorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NumberGuessorTests.m; sourceTree = "<group>"; };
+		49D865EA16A2708100E71B3E /* JFNumberGuessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFNumberGuessor.h; sourceTree = "<group>"; };
+		49D865EB16A2708100E71B3E /* JFNumberGuessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFNumberGuessor.m; sourceTree = "<group>"; };
+		49D865F116A283CB00E71B3E /* JFRandomNumberGeneratorTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFRandomNumberGeneratorTests.h; sourceTree = "<group>"; };
+		49D865F216A283CB00E71B3E /* JFRandomNumberGeneratorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFRandomNumberGeneratorTests.m; sourceTree = "<group>"; };
+		49D865F516A2860600E71B3E /* JFRandomNumberGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFRandomNumberGenerator.h; sourceTree = "<group>"; };
+		49D865F616A2860600E71B3E /* JFRandomNumberGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFRandomNumberGenerator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +118,10 @@
 				49D865CA16A039B600E71B3E /* JFAppDelegate.h */,
 				49D865CB16A039B600E71B3E /* JFAppDelegate.m */,
 				49D865C216A039B600E71B3E /* Supporting Files */,
+				49D865EA16A2708100E71B3E /* JFNumberGuessor.h */,
+				49D865EB16A2708100E71B3E /* JFNumberGuessor.m */,
+				49D865F516A2860600E71B3E /* JFRandomNumberGenerator.h */,
+				49D865F616A2860600E71B3E /* JFRandomNumberGenerator.m */,
 			);
 			path = NumberGuessor;
 			sourceTree = "<group>";
@@ -130,6 +143,8 @@
 				49D865DF16A039B600E71B3E /* NumberGuessorTests.h */,
 				49D865E016A039B600E71B3E /* NumberGuessorTests.m */,
 				49D865DA16A039B600E71B3E /* Supporting Files */,
+				49D865F116A283CB00E71B3E /* JFRandomNumberGeneratorTests.h */,
+				49D865F216A283CB00E71B3E /* JFRandomNumberGeneratorTests.m */,
 			);
 			path = NumberGuessorTests;
 			sourceTree = "<group>";
@@ -252,6 +267,8 @@
 			files = (
 				49D865C816A039B600E71B3E /* main.m in Sources */,
 				49D865CC16A039B600E71B3E /* JFAppDelegate.m in Sources */,
+				49D865EC16A2708100E71B3E /* JFNumberGuessor.m in Sources */,
+				49D865F716A2860600E71B3E /* JFRandomNumberGenerator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49D865E116A039B600E71B3E /* NumberGuessorTests.m in Sources */,
+				49D865F316A283CB00E71B3E /* JFRandomNumberGeneratorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +435,7 @@
 				49D865E616A039B600E71B3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		49D865E716A039B600E71B3E /* Build configuration list for PBXNativeTarget "NumberGuessorTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +444,7 @@
 				49D865E916A039B600E71B3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

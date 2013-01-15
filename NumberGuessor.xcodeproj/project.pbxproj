@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49692B7016A4E6970015C1D7 /* usr in Resources */ = {isa = PBXBuildFile; fileRef = 49692B6F16A4E6970015C1D7 /* usr */; };
+		49692B7216A4E7070015C1D7 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49692B7116A4E7070015C1D7 /* libOCMock.a */; };
 		49D865BC16A039B600E71B3E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D865BB16A039B600E71B3E /* UIKit.framework */; };
 		49D865BE16A039B600E71B3E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D865BD16A039B600E71B3E /* Foundation.framework */; };
 		49D865C016A039B600E71B3E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D865BF16A039B600E71B3E /* CoreGraphics.framework */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		49692B6F16A4E6970015C1D7 /* usr */ = {isa = PBXFileReference; lastKnownFileType = folder; path = usr; sourceTree = "<group>"; };
+		49692B7116A4E7070015C1D7 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = usr/include/libOCMock.a; sourceTree = "<group>"; };
 		49D865B716A039B600E71B3E /* NumberGuessor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumberGuessor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49D865BB16A039B600E71B3E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		49D865BD16A039B600E71B3E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -73,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49692B7216A4E7070015C1D7 /* libOCMock.a in Frameworks */,
 				49D865D416A039B600E71B3E /* SenTestingKit.framework in Frameworks */,
 				49D865D516A039B600E71B3E /* UIKit.framework in Frameworks */,
 				49D865D616A039B600E71B3E /* Foundation.framework in Frameworks */,
@@ -85,6 +90,8 @@
 		49D865AC16A039B600E71B3E = {
 			isa = PBXGroup;
 			children = (
+				49692B7116A4E7070015C1D7 /* libOCMock.a */,
+				49692B6F16A4E6970015C1D7 /* usr */,
 				49D865C116A039B600E71B3E /* NumberGuessor */,
 				49D865D916A039B600E71B3E /* NumberGuessorTests */,
 				49D865BA16A039B600E71B3E /* Frameworks */,
@@ -231,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49D865C616A039B600E71B3E /* InfoPlist.strings in Resources */,
+				49692B7016A4E6970015C1D7 /* usr in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,7 +400,13 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NumberGuessor/NumberGuessor-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/usr/include";
 				INFOPLIST_FILE = "NumberGuessorTests/NumberGuessorTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/usr/include\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -409,7 +423,13 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NumberGuessor/NumberGuessor-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/usr/include";
 				INFOPLIST_FILE = "NumberGuessorTests/NumberGuessorTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/usr/include\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;

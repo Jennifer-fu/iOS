@@ -10,6 +10,6 @@
 
 @interface JFRandomNumberGenerator : NSObject
 
-- (NSArray *) run;
+- (NSArray *) run1;
 
 @end

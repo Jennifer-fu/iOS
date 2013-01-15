@@ -22,6 +22,16 @@
     return self;
 }
 
+- (id)initWithRandomNumberGenerator:(JFRandomNumberGenerator *)generator
+{
+    self = [super init];
+    if(self)
+    {
+        answer = [generator run1];
+    }
+    return self;
+}
+
 - (NSString *)guessWith:(NSArray *)input
 {
     int aCount = 0;

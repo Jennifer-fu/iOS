@@ -10,7 +10,7 @@
 
 @implementation JFRandomNumberGenerator
 
-- (NSArray *)run
+- (NSArray *)run1
 {
     NSMutableArray *result = [NSMutableArray arrayWithCapacity:4];
     for (int i = 0; i < 4; i++) {

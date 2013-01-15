@@ -7,10 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JFRandomNumberGenerator.h"
 
 @interface JFNumberGuessor : NSObject
 
 - (id)initWithTarget:(NSArray *) target;
+
+- (id)initWithRandomNumberGenerator:(JFRandomNumberGenerator *) generator;
 
 - (NSString *) guessWith:(NSArray *) input;
 

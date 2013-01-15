@@ -8,6 +8,8 @@
 
 #import "NumberGuessorTests.h"
 #import "JFNumberGuessor.h"
+#import <OCMock/OCMock.h>
+#import "JFRandomNumberGenerator.h"
 
 @implementation NumberGuessorTests{
     JFNumberGuessor *guessor;
@@ -16,7 +18,9 @@
 - (void)setUp
 {
     [super setUp];
-    guessor = [[JFNumberGuessor alloc] initWithTarget:@[@1,@2,@3,@4]];
+    id mockedGenerator = [OCMockObject mockForClass:[JFRandomNumberGenerator class]];
+    [[[mockedGenerator stub] andReturn:@[@1,@2,@3,@4]] run1];
+    guessor = [[JFNumberGuessor alloc] initWithRandomNumberGenerator:mockedGenerator];
 }
 
 - (void)tearDown

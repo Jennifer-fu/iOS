@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		49692B7016A4E6970015C1D7 /* usr in Resources */ = {isa = PBXBuildFile; fileRef = 49692B6F16A4E6970015C1D7 /* usr */; };
 		49692B7216A4E7070015C1D7 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49692B7116A4E7070015C1D7 /* libOCMock.a */; };
+		49692B7616A4EAFA0015C1D7 /* JFGuessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49692B7416A4EAFA0015C1D7 /* JFGuessViewController.m */; };
+		49692B7716A4EAFA0015C1D7 /* JFGuessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49692B7516A4EAFA0015C1D7 /* JFGuessViewController.xib */; };
 		49D865BC16A039B600E71B3E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D865BB16A039B600E71B3E /* UIKit.framework */; };
 		49D865BE16A039B600E71B3E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D865BD16A039B600E71B3E /* Foundation.framework */; };
 		49D865C016A039B600E71B3E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D865BF16A039B600E71B3E /* CoreGraphics.framework */; };
@@ -38,6 +40,9 @@
 /* Begin PBXFileReference section */
 		49692B6F16A4E6970015C1D7 /* usr */ = {isa = PBXFileReference; lastKnownFileType = folder; path = usr; sourceTree = "<group>"; };
 		49692B7116A4E7070015C1D7 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = usr/include/libOCMock.a; sourceTree = "<group>"; };
+		49692B7316A4EAFA0015C1D7 /* JFGuessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFGuessViewController.h; sourceTree = "<group>"; };
+		49692B7416A4EAFA0015C1D7 /* JFGuessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFGuessViewController.m; sourceTree = "<group>"; };
+		49692B7516A4EAFA0015C1D7 /* JFGuessViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JFGuessViewController.xib; sourceTree = "<group>"; };
 		49D865B716A039B600E71B3E /* NumberGuessor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumberGuessor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49D865BB16A039B600E71B3E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		49D865BD16A039B600E71B3E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -129,6 +134,9 @@
 				49D865EB16A2708100E71B3E /* JFNumberGuessor.m */,
 				49D865F516A2860600E71B3E /* JFRandomNumberGenerator.h */,
 				49D865F616A2860600E71B3E /* JFRandomNumberGenerator.m */,
+				49692B7316A4EAFA0015C1D7 /* JFGuessViewController.h */,
+				49692B7416A4EAFA0015C1D7 /* JFGuessViewController.m */,
+				49692B7516A4EAFA0015C1D7 /* JFGuessViewController.xib */,
 			);
 			path = NumberGuessor;
 			sourceTree = "<group>";
@@ -239,6 +247,7 @@
 			files = (
 				49D865C616A039B600E71B3E /* InfoPlist.strings in Resources */,
 				49692B7016A4E6970015C1D7 /* usr in Resources */,
+				49692B7716A4EAFA0015C1D7 /* JFGuessViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +286,7 @@
 				49D865CC16A039B600E71B3E /* JFAppDelegate.m in Sources */,
 				49D865EC16A2708100E71B3E /* JFNumberGuessor.m in Sources */,
 				49D865F716A2860600E71B3E /* JFRandomNumberGenerator.m in Sources */,
+				49692B7616A4EAFA0015C1D7 /* JFGuessViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

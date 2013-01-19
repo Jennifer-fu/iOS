@@ -28,6 +28,7 @@
     if(self)
     {
         answer = [generator run1];
+        NSLog(@"answer is:%@",answer);
     }
     return self;
 }
@@ -37,7 +38,9 @@
     int aCount = 0;
     int bCount = 0;
     for (int i = 0; i < [input count]; i++) {
-        if([answer objectAtIndex:i] == [input objectAtIndex:i])
+        NSLog(@"answer[1]:%@",[answer objectAtIndex:i]);
+        NSLog(@"answer[1]:%@",[input objectAtIndex:i]);
+        if([[answer objectAtIndex:i] isEqualToNumber: [input objectAtIndex:i]])
             aCount++;
         else if([answer containsObject:[input objectAtIndex:i]])
             bCount++;

@@ -46,4 +46,11 @@
     STAssertEqualObjects(@"0A1B", result, @"Wrong guess");
 }
 
+- (void)testShouldReturn1A0BWhenOnlyOneNumberMatched
+{
+    NSString *result = [guessor guessWith:@[@1,@6,@7,@8]];
+    STAssertEqualObjects(@"1A0B", result, @"Wrong guess");
+}
+
+
 @end

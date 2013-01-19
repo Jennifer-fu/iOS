@@ -51,8 +51,22 @@
 }
 
 - (IBAction)guess:(id)sender {
-    NSArray *guessNumber = [[input text] componentsSeparatedByString:@""];
+    NSArray *guessNumber = [self split:[input text]];
+    NSLog(@"guessNumber:%@", guessNumber);
+    
     NSString *prompt = [guessor guessWith:guessNumber];
     [result setText:prompt];
+}
+
+- (NSArray *) split:(NSString *)target
+{
+    NSMutableArray *array = [[NSMutableArray alloc]initWithCapacity:4];
+    NSNumberFormatter *formater = [[NSNumberFormatter alloc]init];
+    [formater setNumberStyle:NSNumberFormatterDecimalStyle];
+    for (int i = 0; i < target.length; i++) {
+        NSNumber *num = [formater numberFromString:[target substringWithRange:NSMakeRange(i, 1)]];
+        [array addObject:num];
+    }
+    return array;
 }
 @end

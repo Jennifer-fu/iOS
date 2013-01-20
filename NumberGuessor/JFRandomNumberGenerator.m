@@ -12,14 +12,16 @@
 
 - (NSArray *)run1
 {
-    NSMutableArray *result = [NSMutableArray arrayWithCapacity:4];
-    for (int i = 0; i < 4; i++) {
-        NSNumber *randomNumber = [NSNumber numberWithInt:arc4random() % 9];
-        if(![result containsObject:randomNumber])
-            [result addObject:randomNumber];
-        else i--;
+    NSMutableArray *result = [NSMutableArray arrayWithCapacity:10];
+    for (int i = 0; i < 10; i++) {
+        [result addObject:[NSNumber numberWithInt:i]];
     }
-    return result;
+    
+    for (int i = 0; i < 10; i++) {
+        int randomPosition = arc4random() % 4;
+        [result exchangeObjectAtIndex:randomPosition withObjectAtIndex:i];
+    }
+    return [result subarrayWithRange:NSMakeRange(0, 4)];
     
 }
 

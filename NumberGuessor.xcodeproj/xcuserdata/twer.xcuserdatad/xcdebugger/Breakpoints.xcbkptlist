@@ -15,19 +15,6 @@
          endingLineNumber = "11">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "NumberGuessor/JFGuessViewController.m"
-         timestampString = "380259075.323246"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "55"
-         endingLineNumber = "55"
-         landmarkName = "-guess:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
@@ -45,24 +32,24 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "NumberGuessor/JFNumberGuessor.m"
-         timestampString = "380260939.690736"
+         timestampString = "380262738.021817"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "44"
-         endingLineNumber = "44"
+         startingLineNumber = "42"
+         endingLineNumber = "42"
          landmarkName = "-guessWith:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "NumberGuessor/JFNumberGuessor.m"
-         timestampString = "380260939.690736"
+         timestampString = "380262738.021817"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "43"
-         endingLineNumber = "43"
+         startingLineNumber = "41"
+         endingLineNumber = "41"
          landmarkName = "-guessWith:"
          landmarkType = "5">
       </FileBreakpoint>

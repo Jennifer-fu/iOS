@@ -38,8 +38,6 @@
     int aCount = 0;
     int bCount = 0;
     for (int i = 0; i < [input count]; i++) {
-        NSLog(@"answer[1]:%@",[answer objectAtIndex:i]);
-        NSLog(@"answer[1]:%@",[input objectAtIndex:i]);
         if([[answer objectAtIndex:i] isEqualToNumber: [input objectAtIndex:i]])
             aCount++;
         else if([answer containsObject:[input objectAtIndex:i]])

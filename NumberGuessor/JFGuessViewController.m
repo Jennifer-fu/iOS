@@ -16,6 +16,7 @@
 
 @implementation JFGuessViewController{
     JFNumberGuessor *guessor;
+    int count;
 }
 @synthesize result;
 @synthesize input;
@@ -24,10 +25,18 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        JFRandomNumberGenerator *generator = [[JFRandomNumberGenerator alloc]init];
-        guessor = [[JFNumberGuessor alloc]initWithRandomNumberGenerator:generator];
+        [self reset];
     }
     return self;
+}
+
+- (void) reset
+{
+    JFRandomNumberGenerator *generator = [[JFRandomNumberGenerator alloc]init];
+    guessor = [[JFNumberGuessor alloc]initWithRandomNumberGenerator:generator];
+    count = 6;
+    result.text = @"result";
+    input.text = @"";
 }
 
 - (void)viewDidLoad
@@ -51,11 +60,31 @@
 }
 
 - (IBAction)guess:(id)sender {
-    NSArray *guessNumber = [self split:[input text]];
-    NSLog(@"guessNumber:%@", guessNumber);
-    
-    NSString *prompt = [guessor guessWith:guessNumber];
-    [result setText:prompt];
+    if (count<1) {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Failed" message:@"Game Over!" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Try Again", nil];
+        [alert show];
+ 
+    }else{
+        NSArray *guessNumber = [self split:[input text]];
+        NSString *prompt = [guessor guessWith:guessNumber];
+        if ([prompt isEqualToString:@"4A0B"]) {
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Success" message:@"Congratulations!" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Try Again", nil];
+            [alert show];
+        }
+        result.text=prompt;
+        count--;
+    }
+}
+
+- (void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if(buttonIndex==0)
+    {
+    }
+    else if(buttonIndex==1)
+    {
+        [self reset];
+    }
 }
 
 - (NSArray *) split:(NSString *)target

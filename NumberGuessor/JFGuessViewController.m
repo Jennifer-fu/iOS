@@ -16,7 +16,6 @@
 
 @implementation JFGuessViewController{
     JFNumberGuessor *guessor;
-    int count;
 }
 @synthesize result;
 @synthesize input;
@@ -30,13 +29,18 @@
     return self;
 }
 
+- (IBAction)reset:(id)sender
+{
+    [self reset];
+}
+
 - (void) reset
 {
     JFRandomNumberGenerator *generator = [[JFRandomNumberGenerator alloc]init];
     guessor = [[JFNumberGuessor alloc]initWithRandomNumberGenerator:generator];
-    count = 6;
     result.text = @"result";
     input.text = @"";
+    [generator release];
 }
 
 - (void)viewDidLoad
@@ -54,25 +58,33 @@
     // e.g. self.myOutlet = nil;
 }
 
+-(void)dealloc
+{
+    [super dealloc];
+    [guessor release];
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 - (IBAction)guess:(id)sender {
-    if (count<1) {
-        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Failed" message:@"Game Over!" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Try Again", nil];
-        [alert show];
- 
-    }else{
-        NSArray *guessNumber = [self split:[input text]];
-        NSString *prompt = [guessor guessWith:guessNumber];
-        if ([prompt isEqualToString:@"4A0B"]) {
-            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Success" message:@"Congratulations!" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Try Again", nil];
-            [alert show];
-        }
-        result.text=prompt;
-        count--;
+    NSString *prompt = [guessor guessWith:[input text]];
+    
+    if([prompt isEqualToString:@"Failed!"])
+    {
+        result.text = prompt;
+        
+        
+    }
+    else if([prompt isEqualToString:@"Congratulations!"])
+    {
+        result.text = prompt;
+    }
+    else
+    {
+        result.text=[NSString stringWithFormat:@"Result is %@, you have %d time(s) left.",prompt, [guessor leftTimes]];
     }
 }
 
@@ -87,15 +99,4 @@
     }
 }
 
-- (NSArray *) split:(NSString *)target
-{
-    NSMutableArray *array = [[NSMutableArray alloc]initWithCapacity:4];
-    NSNumberFormatter *formater = [[NSNumberFormatter alloc]init];
-    [formater setNumberStyle:NSNumberFormatterDecimalStyle];
-    for (int i = 0; i < target.length; i++) {
-        NSNumber *num = [formater numberFromString:[target substringWithRange:NSMakeRange(i, 1)]];
-        [array addObject:num];
-    }
-    return array;
-}
 @end

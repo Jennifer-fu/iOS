@@ -10,16 +10,7 @@
 
 @implementation JFNumberGuessor{
     NSArray * answer;
-}
-
-- (id)initWithTarget:(NSArray *) target
-{
-    self = [super init];
-    if(self)
-    {
-        answer = target;
-    }
-    return self;
+    int count;
 }
 
 - (id)initWithRandomNumberGenerator:(JFRandomNumberGenerator *)generator
@@ -27,23 +18,55 @@
     self = [super init];
     if(self)
     {
-        answer = [generator run1];
+        answer = [[generator generate] copy];
+        count = 6;
         NSLog(@"answer is:%@",answer);
     }
     return self;
 }
 
-- (NSString *)guessWith:(NSArray *)input
+- (NSString *)guessWith:(NSString *)input
+{
+    NSString *result = [self oneGuessWith:input];
+    if ([result isEqualToString:@"4A0B"]) {
+        return @"Congratulations!";
+    }
+    NSLog(@"count is:%d",count);
+    if(count == 1)return @"Failed!";
+    count--;
+    return result;
+}
+
+- (int) leftTimes
+{
+    return count;
+}
+
+- (NSString *)oneGuessWith:(NSString *)input
 {
     int aCount = 0;
     int bCount = 0;
-    for (int i = 0; i < [input count]; i++) {
-        if([[answer objectAtIndex:i] isEqualToNumber: [input objectAtIndex:i]])
+    NSArray *numbers = [self split:input];
+    for (int i = 0; i < [numbers count]; i++) {
+        if([[answer objectAtIndex:i] isEqualToNumber: [numbers objectAtIndex:i]])
             aCount++;
-        else if([answer containsObject:[input objectAtIndex:i]])
+        else if([answer containsObject:[numbers objectAtIndex:i]])
             bCount++;
     }
     return [NSString stringWithFormat:@"%dA%dB", aCount, bCount];
+}
+
+- (NSArray *) split:(NSString *)target
+{
+    NSMutableArray *array = [[NSMutableArray alloc]initWithCapacity:4];
+    NSNumberFormatter *formater = [[NSNumberFormatter alloc]init];
+    [formater setNumberStyle:NSNumberFormatterDecimalStyle];
+    for (int i = 0; i < target.length; i++) {
+        NSNumber *num = [formater numberFromString:[target substringWithRange:NSMakeRange(i, 1)]];
+        [array addObject:num];
+    }
+    [formater release];
+    return [array autorelease];
 }
 
 @end

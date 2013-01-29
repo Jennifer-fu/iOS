@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *result;
 @property (strong, nonatomic) IBOutlet UITextField *input;
+- (IBAction)reset:(id)sender;
 
 - (IBAction)guess:(id)sender;
 @end

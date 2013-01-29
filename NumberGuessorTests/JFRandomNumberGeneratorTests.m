@@ -26,7 +26,7 @@
 
 - (void)testShouldGenerate4RandomNumberRangeIn0To9
 {
-    NSArray * result = [generator run1];
+    NSArray * result = [generator generate];
     int count = [result count];
     STAssertEquals(4, count, @"Random number count should be 4!");
     for (int i = 0; i < count; i++) {
@@ -38,7 +38,7 @@
 
 - (void)testShouldGenerate4RandomNumberWithoutDuplication
 {
-    NSArray * result = [generator run1];
+    NSArray * result = [generator generate];
     int count = [result count];
     STAssertEquals(4, count, @"Random number count should be 4!");
     STAssertTrue([[result objectAtIndex:0] intValue]!=[[result objectAtIndex:1] intValue]!=[[result objectAtIndex:2] intValue]!=[[result objectAtIndex:3] intValue], @"duplication");

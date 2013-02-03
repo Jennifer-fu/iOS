@@ -8,6 +8,7 @@
 
 #import "JFAppDelegate.h"
 #import "JFGuessViewController.h"
+#import "JFSettingsViewController.h"
 
 @implementation JFAppDelegate
 
@@ -16,7 +17,24 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = [[[JFGuessViewController alloc]init] autorelease];
+    
+    //self.window.rootViewController = [[[JFGuessViewController alloc]init] autorelease];
+    UITabBarController *tabBarController = [[UITabBarController alloc]init];
+    JFGuessViewController *guessViewController = [[JFGuessViewController alloc]init];
+    guessViewController.tabBarItem.title = @"GuessNumber";
+
+    JFSettingsViewController *settingsController = [[JFSettingsViewController alloc]init];
+    UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:settingsController];
+    
+    navigationController.tabBarItem.title = @"Settings";
+    tabBarController.viewControllers = @[guessViewController, navigationController];
+    self.window.rootViewController = tabBarController;
+    
+    [settingsController release];
+    [guessViewController release];
+    [tabBarController release];
+    
+    
     [self.window makeKeyAndVisible];
     return YES;
 }

@@ -60,15 +60,21 @@
     return 1;
 }
 
-// returns the # of rows in each component..
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
     return levels.count;
 }
 
-
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
     return [levels objectAtIndex:row];
 }
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+    NSString *level = [levels objectAtIndex:row];
+    NSUserDefaults *levelDefualts = [NSUserDefaults standardUserDefaults];
+    [levelDefualts setObject:level forKey:@"numberGuessLevel"];
+}
+
 @end

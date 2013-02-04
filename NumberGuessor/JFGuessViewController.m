@@ -17,6 +17,8 @@
 @implementation JFGuessViewController{
     JFNumberGuessor *guessor;
 }
+@synthesize restart;
+@synthesize guess;
 @synthesize result;
 @synthesize input;
 
@@ -27,11 +29,6 @@
         [self reset];
     }
     return self;
-}
-
-- (IBAction)reset:(id)sender
-{
-    [self reset];
 }
 
 - (void) reset
@@ -53,6 +50,8 @@
 {
     [self setInput:nil];
     [self setResult:nil];
+    [self setRestart:nil];
+    [self setGuess:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -60,6 +59,7 @@
 
 -(void)dealloc
 {
+    [restart release];
     [super dealloc];
     [guessor release];
 }
@@ -69,18 +69,29 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (IBAction)guess:(id)sender {
+- (IBAction)restart:(id)sender
+{
+    [self reset];
+    [guess setHidden:NO];
+    [restart setHidden:YES];
+}
+
+- (IBAction)guess:(id)sender
+{
     NSString *prompt = [guessor guessWith:[input text]];
     
     if([prompt isEqualToString:@"Failed!"])
     {
         result.text = prompt;
-        
-        
+
+        [restart setHidden:NO];
+        [guess setHidden:YES];
     }
     else if([prompt isEqualToString:@"Congratulations!"])
     {
         result.text = prompt;
+        [guess setHidden:YES];        
+        [restart setHidden:FALSE];
     }
     else
     {

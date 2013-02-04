@@ -18,6 +18,9 @@
     self = [super init];
     if(self)
     {
+        NSUserDefaults *levelDefualts = [NSUserDefaults standardUserDefaults];
+        NSString *level = [levelDefualts objectForKey:@"numberGuessLevel"];
+        NSLog(@"number guess level is:%@",level);
         answer = [[generator generate] copy];
         count = 6;
         NSLog(@"answer is:%@",answer);

@@ -60,6 +60,7 @@
 -(void)dealloc
 {
     [restart release];
+    [guess release];
     [super dealloc];
     [guessor release];
 }

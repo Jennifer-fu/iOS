@@ -16,6 +16,6 @@
 - (IBAction)restart:(id)sender;
 
 @property (retain, nonatomic) IBOutlet UIButton *restart;
-@property (retain, nonatomic) IBOutlet UIButton *guess;
 
+@property (retain, nonatomic) IBOutlet UIButton *guess;
 @end

@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "NumberGuessor/JFGuessViewController.m"
-         timestampString = "381599714.42832"
+         timestampString = "381643785.723728"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "87"
-         endingLineNumber = "87"
+         startingLineNumber = "88"
+         endingLineNumber = "88"
          landmarkName = "-guess:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -34,11 +34,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "NumberGuessor/JFGuessViewController.m"
-         timestampString = "381599486.346198"
+         timestampString = "381643785.723728"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "74"
-         endingLineNumber = "74"
+         startingLineNumber = "75"
+         endingLineNumber = "75"
          landmarkName = "-restart:"
          landmarkType = "5">
       </FileBreakpoint>
